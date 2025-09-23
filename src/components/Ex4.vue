@@ -3,10 +3,23 @@
         data() {
             return {
                 // Add code here
+                id : "demo1",
+                divColor : "blue",
+                btnColor : "btn-primary"
             }
         },
         methods: { 
    			// Add code here
+            changeColor() {
+                if (this.divColor == 'blue'){
+                    this.divColor = "red", 
+                    this.btnColor = "btn-danger"
+                }
+                else {
+                    this.divColor = "blue",
+                    this.btnColor = "btn-primary"
+                }
+            }
 		}
     }
 </script>
@@ -15,11 +28,11 @@
     
     <!-- Modify code here -->
     <div class="container">
-        <div v-bind:id="id" class="m-2">
+        <div v-bind:id="id" :style="{'background-color': divColor}" class="m-2">
             div ID : {{id}} 
         </div>
         
-        <button type="button">Change Color</button>
+        <button v-on:click="changeColor" :class="btnColor" class="btn" type="button">Change Color</button>
     </div>
 
 </template>

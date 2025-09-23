@@ -27,6 +27,7 @@
     <p>The button above has been clicked {{ counter }} times.</p>
 
     <button v-on:click="hello">Say Hello</button>
+    <button v-on:keyup.enter="hello">Press Enter</button>
 
     <button @click="say('hi')">Say hi</button> 
     <button @click="say('what')">Say what</button> 
