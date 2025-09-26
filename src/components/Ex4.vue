@@ -5,7 +5,7 @@
                 // Add code here
                 id : "demo1",
                 divColor : "blue",
-                btnColor : "btn-primary"
+                btnColor : "btn btn-primary"
             }
         },
         methods: { 
@@ -13,11 +13,11 @@
             changeColor() {
                 if (this.divColor == 'blue'){
                     this.divColor = "red", 
-                    this.btnColor = "btn-danger"
+                    this.btnColor = "btn btn-danger"
                 }
                 else {
                     this.divColor = "blue",
-                    this.btnColor = "btn-primary"
+                    this.btnColor = "btn btn-primary"
                 }
             }
 		}
@@ -32,7 +32,7 @@
             div ID : {{id}} 
         </div>
         
-        <button v-on:click="changeColor" :class="btnColor" class="btn" type="button">Change Color</button>
+        <button v-on:click="changeColor" :class="btnColor" type="button">Change Color</button>
     </div>
 
 </template>
